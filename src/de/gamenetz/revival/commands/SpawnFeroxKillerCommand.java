@@ -50,6 +50,7 @@ public class SpawnFeroxKillerCommand implements CommandExecutor, Listener{
 					z.getEquipment().setItemInHand(new ItemStack(Material.DIAMOND_SWORD));
 					z.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000, 4));
 					z.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100000, 4));
+					z.setTarget(t);
 					}else{
 					p.sendMessage(ChatColor.RED + "Er ist nicht online!");
 				}

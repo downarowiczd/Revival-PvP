@@ -109,8 +109,7 @@ public class HeadsUpDisplay {
 		return packet;
 	}
 
-	public static PacketPlayOutEntityMetadata getMetadataPacket(
-			DataWatcher watcher) {
+	public static PacketPlayOutEntityMetadata getMetadataPacket(DataWatcher watcher) {
 		PacketPlayOutEntityMetadata metaPacket = new PacketPlayOutEntityMetadata();
 		Field a = getField(metaPacket.getClass(), "a");
 		a.setAccessible(true);
