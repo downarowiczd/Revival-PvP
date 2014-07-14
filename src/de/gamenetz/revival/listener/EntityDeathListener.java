@@ -145,6 +145,8 @@ public class EntityDeathListener implements Listener{
 					RevivalData.BOSS_ZOMBIE_LOCATION = null;
 					RevivalData.BOSS_ZOMBIE_ID = 0;
 					RevivalData.BOSS_ZOMBIE_SCH_ID = 0;
+					Bukkit.broadcastMessage(ChatColor.YELLOW + "Der Zombie-Boss ist gestorben!");
+					
 				}
 				
 			if(name.equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&cZombie Lvl 4"))){

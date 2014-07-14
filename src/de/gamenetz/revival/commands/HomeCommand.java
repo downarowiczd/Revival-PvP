@@ -14,7 +14,7 @@ import de.gamenetz.revival.User;
 
 public class HomeCommand implements CommandExecutor{
 	
-	private int NORMAL_USER = 2;
+	private int NORMAL_USER = 1;
 	private int PREMIUM_USER = 5;
 	
 	@Override
