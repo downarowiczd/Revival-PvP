@@ -17,6 +17,7 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityTargetEvent;
+import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -70,8 +71,22 @@ public class SpawnFeroxKillerCommand implements CommandExecutor, Listener{
 			}
 		}
 		
+	}
+	
+	@EventHandler
+	public void onTargetL(EntityTargetLivingEntityEvent event){
+		if(event.getEntityType() == EntityType.ZOMBIE){
+			Zombie z = (Zombie)event.getEntity();
+			if(z.getCustomName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&cFerox-Killer"))){
+				Entity ep = Bukkit.getPlayer("69e234f5-b7cf-31d5-88a8-c3b60465c56b");
+				if(ep != null){
+					event.setTarget(ep);
+				}
+			}
+		}
 		
 	}
+	
 	
 
 }
