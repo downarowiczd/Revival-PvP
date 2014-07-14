@@ -19,6 +19,7 @@ import de.gamenetz.revival.commands.RangCommand;
 import de.gamenetz.revival.commands.RankingCommand;
 import de.gamenetz.revival.commands.RevivalCommand;
 import de.gamenetz.revival.commands.SkypeCommand;
+import de.gamenetz.revival.commands.SpawnFeroxKillerCommand;
 import de.gamenetz.revival.commands.SpawnZombieBossCommand;
 import de.gamenetz.revival.commands.StatsCommand;
 import de.gamenetz.revival.commands.TPACommand;
@@ -114,6 +115,7 @@ public class Revival extends JavaPlugin{
 		this.getCommand("stats").setExecutor(new StatsCommand());
 		this.getCommand("enderchest").setExecutor(new EnderChestCommand());
 		this.getCommand("spawnzombieboss").setExecutor(new SpawnZombieBossCommand());
+		this.getCommand("spawnferoxkiller").setExecutor(new SpawnFeroxKillerCommand());
 		/*Listener*/
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new JoinQuitListener(), this);
@@ -130,6 +132,7 @@ public class Revival extends JavaPlugin{
 		pm.registerEvents(new GameModListener(), this);
 		pm.registerEvents(new AntiGiveCommandListener(), this);
 		pm.registerEvents(new UnloadChunkListener(), this);
+		pm.registerEvents(new SpawnFeroxKillerCommand(), this);
 		RevivalData.COMBAT_TIMER_ID = CombatChecker.startTimer();
 		/*Scoreboard*/		
 	}
