@@ -1,0 +1,64 @@
+name: Revival-PvP
+version: Alpha
+author: DOWNARDO
+website: http://www.downardo.at.vu
+description: The Main Plugin of Revival-PvP
+main: de.gamenetz.revival.Revival
+
+commands:
+  revival:
+    description: The Main Command
+    aliases: [rv]
+  team:
+    description: Team Command
+  bewerben:
+    description: Bewerben Command
+  cc:
+    description: CC Command
+  frieden:
+    description: Frieden Command
+  annehmen:
+    description: Annehmen Command
+  ablehnen:
+    description: Ablehnen Command
+  home:
+    description: Home Command
+  sethome:
+    description: SetHome Command
+  delhome:
+    description: DelHome Command
+  homes:
+    description: Homes Command
+  rang:
+    description: Rang Command
+  ranking:
+    description: Ranking Command
+  skype:
+    description: Skype Command
+  ts:
+    description: TS Command
+  vote:
+    description: Vote Command
+  votegive:
+    description: VoteGive Command
+  voteinfo:
+    description: Voteinfo Command
+  msg:
+    description: MSG Command
+  r:
+    description: R Command
+  tpa:
+    description: tpa Command
+  tpahere:
+    description: tpahere Command
+  tpaccept:
+    description: tpaccept Command
+  tpadeny:
+    description: tpdeny Command
+  stats:
+    description: stats Command
+  enderchest:
+    description: enderchest Command
+    aliases: [eches, ec, enderc]
+  spawnzombieboss:
+    description: spawnzombieboss Command
