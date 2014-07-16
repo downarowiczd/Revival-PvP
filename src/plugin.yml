@@ -62,5 +62,3 @@ commands:
     aliases: [eches, ec, enderc]
   spawnzombieboss:
     description: spawnzombieboss Command
-  spawnferoxkiller:
-    description: spawnferoxkiller Command
