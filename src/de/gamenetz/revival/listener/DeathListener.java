@@ -10,6 +10,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
+import de.gamenetz.revival.CombatChecker;
 import de.gamenetz.revival.RevivalData;
 import de.gamenetz.revival.User;
 
@@ -22,6 +23,9 @@ public class DeathListener implements Listener{
 		Player death = event.getEntity().getPlayer();
 		User deathUser = new User(death.getUniqueId());
 		deathUser.addDeaths(1);
+		if(CombatChecker.isInCombat(death.getName())){
+			CombatChecker.removeFromCombat(death.getName());
+		}
 		if(event.getEntity().getKiller() instanceof Player){
 			Player killer = event.getEntity().getKiller();
 			if(killer.getUniqueId().toString().equals(death.getUniqueId().toString())){
