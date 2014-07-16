@@ -41,6 +41,8 @@ public class JoinQuitListener implements Listener{
 			String joinMSG = ChatColor.translateAlternateColorCodes('&', "§8(§a+§8) §7" + p.getName());
 			event.setJoinMessage(joinMSG);
 			u.sendMessage("&a&lMoooooooooiiiiiiiiiinnnnnnnnn");
+			u.sendMessage("&a&lSry wegen der Stoerung. Unsere Kiste wollte nicht gehen!");
+			u.sendMessage("&a&lP.S.: Kiste bedeutet bei den Profis vServer :D");
 		}else{
 			u.register(p.getName());
 			Bukkit.getScheduler().scheduleSyncDelayedTask(Bukkit.getPluginManager().getPlugin("Revival-PvP"), new Runnable() {

@@ -17,7 +17,6 @@ import java.util.Random;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -97,9 +96,13 @@ public class RevivalData {
         		if(loc.distance(loc.getWorld().getSpawnLocation()) >= RevivalData.BORDER_RADIUS){
         			continue;
         		}else{
+        			Location loc2 = loc;
+            		loc2.setY(loc2.getY() - 1);
+                	if(loc2.getY() != 0 && loc2.getBlock().getType() != Material.WATER && loc2.getBlock().getType() != Material.LAVA && loc2.getBlock().getType() != Material.STATIONARY_WATER && loc2.getBlock().getType() != Material.STATIONARY_LAVA){
         			safe = true;
         			loc.setY(loc.getY() + 1);
         			break;
+                	}
         		}
         	}
         		x = loc.getX();
@@ -131,7 +134,7 @@ public class RevivalData {
 		    System.err.println(e);
 		}
 		return g;
-	    }
+	}
 	
 	public static void setPlayerInventory(Player p){
 		p.getInventory().setItem(0, new ItemStack(Material.COMPASS, 1));

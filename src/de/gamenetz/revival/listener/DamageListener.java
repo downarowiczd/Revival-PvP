@@ -26,6 +26,7 @@ public class DamageListener implements Listener{
 	
 	private String KNOW_IN_COMBAT = RevivalData.MAIN_PREFIX + ChatColor.translateAlternateColorCodes('&', "&aDu bist nun im Kampf!");
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onDamageListener(EntityDamageByEntityEvent event){
 		if(event.getEntity() instanceof Player){
@@ -106,6 +107,7 @@ public class DamageListener implements Listener{
 	}
   }
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onPotionSplash(PotionSplashEvent e){
 		ThrownPotion pot = e.getPotion();

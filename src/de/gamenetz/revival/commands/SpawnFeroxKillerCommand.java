@@ -40,6 +40,7 @@ public class SpawnFeroxKillerCommand implements CommandExecutor, Listener{
 					z.setCustomName(ChatColor.translateAlternateColorCodes('&', "&cFerox-Killer"));
 					z.setCustomNameVisible(true);
 					z.setRemoveWhenFarAway(false);
+					z.setBaby(false);
 					Damageable d = (Damageable)e;
 					d.setMaxHealth(100.00);
 					d.setHealth(100.00);
@@ -69,6 +70,8 @@ public class SpawnFeroxKillerCommand implements CommandExecutor, Listener{
 				if(ep != null){
 					event.setTarget(ep);
 				}
+			}else{
+				event.setCancelled(true);
 			}
 		}
 		
@@ -83,6 +86,8 @@ public class SpawnFeroxKillerCommand implements CommandExecutor, Listener{
 				if(ep != null){
 					event.setTarget(ep);
 				}
+			}else{
+				event.setCancelled(true);
 			}
 		}
 		
